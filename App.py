@@ -5,7 +5,9 @@ import matplotlib.pyplot as plt
 
 sns.set(style="ticks")
 
-file_path = r'C:\Users\guilh\OneDrive\Desktop\Code\Agiota\Cachorro_Agiota.txt'
+#Aqui você deve clocar o caminho do seu diretório.
+file_path = r''
+#Ex: file_path = r'C:\Users\guilh\OneDrive\Desktop\Code\batutinhas.txt'
 
 def process_whatsapp_chat(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
