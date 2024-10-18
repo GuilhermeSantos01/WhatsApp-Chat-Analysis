@@ -65,17 +65,17 @@ else:
     ax.table(cellText=df_mensagens_por_pessoa.values, colLabels=df_mensagens_por_pessoa.columns, cellLoc='center', loc='center')
     ax.set_title('Quantidade de Mensagens')
     plt.show()
-
+    
     all_messages = ' '.join(chat_df['Message']).lower()
+    all_messages = all_messages.replace("<mídia oculta>", "")
+
     words = all_messages.split()
     words = [word for word in words if len(word) >= 4]
-    
+
     word_series = pd.Series(words)
     word_counts = word_series.value_counts()
-    
-    word_counts = word_counts.nlargest(len(word_counts)).iloc[2:]
 
-    most_common_words = word_counts.head(5)
+    most_common_words = word_counts.head(10)
 
     print("\n5 palavras mais usadas no grupo")
     for word, count in most_common_words.items():
