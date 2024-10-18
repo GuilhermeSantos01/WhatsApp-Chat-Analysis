@@ -84,7 +84,7 @@ else:
     if not most_common_words.empty:
         plt.figure(figsize=(10, 6))
         sns.barplot(x=most_common_words.index, y=most_common_words.values, palette="rocket")
-        plt.title('5 Palavras Mais Usadas no Grupo')
+        plt.title('10 Palavras Mais Usadas no Grupo')
         plt.xlabel('Palavras')
         plt.ylabel('Frequência')
         plt.xticks(rotation=45)
