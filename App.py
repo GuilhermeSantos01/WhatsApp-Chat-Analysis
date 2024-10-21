@@ -109,7 +109,7 @@ else:
     plt.figure(figsize=(14, 7))
     for pessoa in mensagens_por_dia_pessoa.columns:
         sns.lineplot(x=mensagens_por_dia_pessoa.index, y=mensagens_por_dia_pessoa[pessoa], label=pessoa)
-    plt.title('Número de Mensagens por Dia e Pessoa')
+    plt.title('A pessoa que mais falou em 1 dia')
     plt.xlabel('Data')
     plt.ylabel('Número de Mensagens')
     plt.xticks(rotation=45)
